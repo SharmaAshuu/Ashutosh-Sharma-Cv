@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashutosh Sharma — Data Analyst</title>
+<meta name="description" content="Ashutosh Sharma — Data Analyst & Data Science Postgraduate. Python, SQL, Machine Learning, NLP, Power BI, Tableau.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1F3A;
+    --ink-2:#132a4d;
+    --paper:#F5F4EF;
+    --card:#FFFFFF;
+    --teal:#1E8A82;
+    --teal-dark:#0F5850;
+    --amber:#E8A33D;
+    --text:#26303D;
+    --muted:#68738A;
+    --line:#DEDCD2;
+    --radius:14px;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--teal-dark);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    background:var(--ink);
+    color:#EDEFF3;
+    padding:64px 0 0 0;
+    position:relative;
+    overflow:hidden;
+  }
+  header.hero .wrap{position:relative; z-index:2;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#8FB9C7;
+    margin:0 0 14px 0;
+  }
+  h1.name{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:clamp(2.4rem, 6vw, 3.6rem);
+    letter-spacing:-0.01em;
+    margin:0;
+    line-height:1.02;
+  }
+  .role-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:15px;
+    color:#9FD8CE;
+    margin:14px 0 26px 0;
+  }
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 22px;
+    padding-bottom:34px;
+    font-size:14px;
+    color:#C7CEDA;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .contact-row a{color:#C7CEDA;}
+  .contact-row a:hover{color:#fff;}
+  .contact-row span.sep{opacity:.4;}
+
+  /* sparkline signature */
+  .spark{
+    display:flex;
+    align-items:flex-end;
+    gap:5px;
+    height:56px;
+    padding:22px 0 22px 0;
+  }
+  .spark i{
+    display:block;
+    width:7px;
+    background:linear-gradient(180deg, var(--teal) 0%, #63c9bd 100%);
+    border-radius:2px 2px 0 0;
+    transform:scaleY(0);
+    transform-origin:bottom;
+    animation:grow .7s cubic-bezier(.2,.8,.3,1) forwards;
+  }
+  @keyframes grow{ to{ transform:scaleY(1); } }
+  @media (prefers-reduced-motion: reduce){
+    .spark i{ animation:none; transform:scaleY(1); }
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{ padding:52px 0; }
+  section.alt{ background:#F0EEE6; }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:26px;
+  }
+  .section-head .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--teal-dark);
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .section-head h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:1.5rem;
+    font-weight:600;
+    margin:0;
+    color:var(--ink);
+  }
+  .section-head::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+  .summary p{
+    font-size:1.02rem;
+    max-width:74ch;
+    color:#3A4457;
+  }
+  .summary strong{ color:var(--ink); }
+
+  /* ---------- EDUCATION TIMELINE ---------- */
+  .timeline{ position:relative; padding-left:26px; }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:5px; top:6px; bottom:6px;
+    width:2px;
+    background:var(--line);
+  }
+  .tl-item{ position:relative; padding-bottom:26px; }
+  .tl-item:last-child{ padding-bottom:0; }
+  .tl-item::before{
+    content:"";
+    position:absolute;
+    left:-26px; top:4px;
+    width:12px; height:12px;
+    border-radius:50%;
+    background:var(--card);
+    border:2.5px solid var(--teal);
+  }
+  .tl-year{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--teal-dark);
+    font-weight:500;
+  }
+  .tl-title{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:1.08rem;
+    color:var(--ink);
+    margin:2px 0 2px 0;
+  }
+  .tl-meta{ font-size:14px; color:var(--muted); }
+  .tl-grade{
+    display:inline-block;
+    margin-top:6px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    background:#E4F1EE;
+    color:var(--teal-dark);
+    padding:2px 9px;
+    border-radius:20px;
+  }
+
+  /* ---------- PROJECTS: dashboard tiles ---------- */
+  .tiles{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:18px;
+  }
+  .tile{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px 22px 20px 22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .tile.wide{ grid-column:1 / -1; }
+  .tile-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+  }
+  .tile-title{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:1.05rem;
+    color:var(--ink);
+    margin:0;
+  }
+  .tile-icon{
+    width:34px; height:34px;
+    flex:none;
+    border-radius:9px;
+    background:#E4F1EE;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .tile-icon svg{ width:18px; height:18px; }
+  .tile p{ font-size:14.5px; color:#454f60; margin:0; }
+  .tags{ display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; padding-top:6px; }
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--muted);
+    background:#F0EEE6;
+    border:1px solid var(--line);
+    padding:3px 8px;
+    border-radius:6px;
+  }
+
+  /* ---------- SKILLS ---------- */
+  .skill-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:22px 34px;
+  }
+  .skill-group h3{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--teal-dark);
+    margin:0 0 10px 0;
+    font-weight:500;
+  }
+  .pillrow{ display:flex; flex-wrap:wrap; gap:8px; }
+  .pill{
+    font-size:13.5px;
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:5px 12px;
+    border-radius:20px;
+    color:var(--text);
+  }
+
+  /* ---------- CERTIFICATIONS ---------- */
+  .cert-list{ display:flex; flex-direction:column; }
+  .cert-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .cert-row:last-child{ border-bottom:none; }
+  .cert-name{ font-weight:500; color:var(--ink); font-size:15px; }
+  .cert-issuer{ font-size:13.5px; color:var(--muted); }
+  .cert-date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--teal-dark);
+    white-space:nowrap;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    color:#B9C2D1;
+    padding:38px 0;
+    text-align:center;
+    font-size:13.5px;
+  }
+  footer a{ color:#EDEFF3; }
+  footer .foot-links{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin-bottom:14px;
+    flex-wrap:wrap;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+  }
+
+  @media (max-width:640px){
+    .tiles{ grid-template-columns:1fr; }
+    .tile.wide{ grid-column:auto; }
+    .skill-grid{ grid-template-columns:1fr; }
+    section{ padding:40px 0; }
+  }
+
+  /* print */
+  @media print{
+    header.hero{ background:var(--ink); -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    section.alt{ background:#F0EEE6; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Data Analyst · Nagpur, India</p>
+    <h1 class="name">Ashutosh Sharma</h1>
+    <p class="role-line">Data Science &amp; Analytics · Python · SQL · Machine Learning · NLP</p>
+    <div class="contact-row">
+      <a href="tel:+919284073347">+91 92840 73347</a>
+      <span class="sep">/</span>
+      <a href="mailto:sharma.ashutosh.work@gmail.com">sharma.ashutosh.work@gmail.com</a>
+      <span class="sep">/</span>
+      <a href="https://www.linkedin.com/in/ashutosh-sharma-in/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">/</span>
+      <a href="https://github.com/SharmaAshuu" target="_blank" rel="noopener">GitHub</a>
+      <span class="sep">/</span>
+      <a href="#" target="_blank" rel="noopener">Portfolio</a>
+    </div>
+    <div class="spark" aria-hidden="true">
+      <i style="height:38%; animation-delay:.02s;"></i>
+      <i style="height:55%; animation-delay:.07s;"></i>
+      <i style="height:40%; animation-delay:.12s;"></i>
+      <i style="height:70%; animation-delay:.17s;"></i>
+      <i style="height:50%; animation-delay:.22s;"></i>
+      <i style="height:85%; animation-delay:.27s;"></i>
+      <i style="height:64%; animation-delay:.32s;"></i>
+      <i style="height:94%; animation-delay:.37s;"></i>
+      <i style="height:72%; animation-delay:.42s;"></i>
+      <i style="height:100%; animation-delay:.47s;"></i>
+    </div>
+  </div>
+</header>
+
+<section class="summary">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">// summary</span>
+      <h2>Professional summary</h2>
+    </div>
+    <p>
+      <strong>Postgraduate in Data Science &amp; Analytics</strong> with hands-on experience in
+      <strong>Python, SQL, Machine Learning, NLP, and data visualization</strong>. Skilled in data preprocessing,
+      feature engineering, predictive modeling, and deploying ML applications using
+      <strong>Scikit-learn, TensorFlow, PyTorch, and Streamlit</strong>. Certified in
+      <strong>AI Ethics (IBM SkillsBuild)</strong> with a strong understanding of responsible AI practices.
+      Passionate about building AI-driven solutions with strong analytical, problem-solving, and continuous
+      learning abilities.
+    </p>
+  </div>
+</section>
+
+<section class="alt" id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">// education</span>
+      <h2>Education</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <span class="tl-year">2025 – 2026</span>
+        <p class="tl-title">Postgraduate Program in Data Science &amp; Analytics with Machine Learning</p>
+        <p class="tl-meta">Imarticus Learning, Pune</p>
+        <span class="tl-grade">Grade A+</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2022 – 2024</span>
+        <p class="tl-title">M.Sc. in Biotechnology</p>
+        <p class="tl-meta">Rashtrasant Tukadoji Maharaj Nagpur University</p>
+        <span class="tl-grade">77.12%</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2019 – 2022</span>
+        <p class="tl-title">B.Sc. in Microbiology</p>
+        <p class="tl-meta">Rashtrasant Tukadoji Maharaj Nagpur University</p>
+        <span class="tl-grade">77.41%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">// projects</span>
+      <h2>Projects</h2>
+    </div>
+    <div class="tiles">
+
+      <div class="tile wide">
+        <div class="tile-top">
+          <p class="tile-title">Medi Sense — Pharmaceutical Drug Review Sentiment Analysis</p>
+          <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0F5850" stroke-width="2"><path d="M4 19V9M10 19V5M16 19v-7M22 19v-3"/></svg></div>
+        </div>
+        <p>Developed an end-to-end NLP model to classify 215K+ drug reviews with 92–94% accuracy, deploying an interactive Streamlit application for real-time sentiment prediction.</p>
+        <div class="tags">
+          <span class="tag2 tag">Python</span><span class="tag2 tag">NLP</span><span class="tag2 tag">Scikit-learn</span><span class="tag2 tag">TF-IDF</span><span class="tag2 tag">Logistic Regression</span><span class="tag2 tag">Streamlit</span>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-top">
+          <p class="tile-title">Credit Risk Prediction &amp; Analysis</p>
+          <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0F5850" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
+        </div>
+        <p>Built end-to-end data pipelines for preprocessing, feature engineering, and predictive modeling using Scikit-learn Decision Trees.</p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Decision Trees</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">AWS</span>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-top">
+          <p class="tile-title">Drug Sales Report Dashboard</p>
+          <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0F5850" stroke-width="2"><rect x="3" y="10" width="4" height="10"/><rect x="10" y="5" width="4" height="15"/><rect x="17" y="13" width="4" height="7"/></svg></div>
+        </div>
+        <p>Designed a Power BI dashboard to track drug revenue, identify top and bottom-performing products, and evaluate customer purchase trends.</p>
+        <div class="tags">
+          <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Trend Analysis</span>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-top">
+          <p class="tile-title">Insurance Claim Performance Dashboard</p>
+          <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0F5850" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        </div>
+        <p>Engineered a Power BI dashboard to monitor settlement rates, processing timelines, and overall claim performance metrics.</p>
+        <div class="tags">
+          <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">KPI Tracking</span>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-top">
+          <p class="tile-title">Superstore Sales Analysis Dashboard</p>
+          <div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0F5850" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
+        </div>
+        <p>Developed an interactive Tableau dashboard to visualize sales metrics, product performance, and regional trends using the Superstore dataset.</p>
+        <div class="tags">
+          <span class="tag">Tableau</span><span class="tag">Sales Analytics</span><span class="tag">Data Viz</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">// skills</span>
+      <h2>Technical skills</h2>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-group">
+        <h3>Programming &amp; analysis</h3>
+        <div class="pillrow">
+          <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Scikit-learn</span><span class="pill">PyTorch</span><span class="pill">TensorFlow</span><span class="pill">Large Data Processing</span><span class="pill">Data Mining</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Machine learning</h3>
+        <div class="pillrow">
+          <span class="pill">EDA</span><span class="pill">Feature Engineering</span><span class="pill">Regression</span><span class="pill">Clustering</span><span class="pill">Predictive Modelling</span><span class="pill">ETL Pipelines</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Data visualization</h3>
+        <div class="pillrow">
+          <span class="pill">Power BI</span><span class="pill">Tableau</span><span class="pill">Looker Studio</span><span class="pill">DAX</span><span class="pill">Excel Dashboards</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Database management</h3>
+        <div class="pillrow">
+          <span class="pill">MySQL</span><span class="pill">SQL Queries</span><span class="pill">Database Design</span><span class="pill">Data Cleaning</span><span class="pill">Data Validation</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Cloud &amp; tools</h3>
+        <div class="pillrow">
+          <span class="pill">AWS</span><span class="pill">Microsoft Azure</span><span class="pill">GitHub</span><span class="pill">VS Code</span><span class="pill">MS Office</span><span class="pill">Prompt Engineering</span><span class="pill">Generative AI</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Soft skills</h3>
+        <div class="pillrow">
+          <span class="pill">Analytical Thinking</span><span class="pill">Problem Solving</span><span class="pill">Attention to Detail</span><span class="pill">Self-Learning</span><span class="pill">Communication</span><span class="pill">Team Collaboration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">// certifications</span>
+      <h2>Certifications</h2>
+    </div>
+    <div class="cert-list">
+      <div class="cert-row">
+        <div><span class="cert-name">The Fundamentals of Statistics</span> <span class="cert-issuer">— Alison</span></div>
+        <span class="cert-date">Jun 2026</span>
+      </div>
+      <div class="cert-row">
+        <div><span class="cert-name">Business Analytics with Excel</span> <span class="cert-issuer">— Imarticus Learning</span></div>
+        <span class="cert-date">Jun 2026</span>
+      </div>
+      <div class="cert-row">
+        <div><span class="cert-name">Data Analytics Essentials</span> <span class="cert-issuer">— Cisco Networking Academy</span></div>
+        <span class="cert-date">Jun 2026</span>
+      </div>
+      <div class="cert-row">
+        <div><span class="cert-name">AI Ethics</span> <span class="cert-issuer">— IBM SkillsBuild</span></div>
+        <span class="cert-date">Jun 2026</span>
+      </div>
+      <div class="cert-row">
+        <div><span class="cert-name">Personality Value Assessment</span> <span class="cert-issuer">— Good Space AI</span></div>
+        <span class="cert-date">Jun 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="mailto:sharma.ashutosh.work@gmail.com">Email</a>
+      <a href="tel:+919284073347">Phone</a>
+      <a href="https://www.linkedin.com/in/ashutosh-sharma-in/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/SharmaAshuu" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">Portfolio</a>
+    </div>
+    Ashutosh Sharma · Nagpur, India
+  </div>
+</footer>
+
+</body>
+</html>
